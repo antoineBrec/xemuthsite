@@ -10,7 +10,7 @@ header('Location: base.php');
 
 
 ?>
-// GROS PD //
+
 <?php
 
 			$sqlip='xemuth.maitremechant.com';
