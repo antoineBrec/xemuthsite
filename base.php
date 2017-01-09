@@ -178,14 +178,14 @@ else
 		<div class="left-box">
 			<h2 class="title">Annonces</h2>
 				<ul>
-					<li>
-						<h3>19 Décembre 2016</h3>
-						<v2>Ouverture du serveur au testeur</v2>
+          <li>
+						<h3>9 Janvier 2017</h3>
+						<v2>Site presque terminé, ouverture Iminente !</v2>
 					</li>
-					<li>
-					<h3>19 Décembre 2016</h3>
-					<v2>Première ébauche du site</v2>
-					</li>
+          <li>
+            <h3>19 Décembre 2016</h3>
+            <v2>Ouverture du serveur au testeur</v2>
+          </li>
 
 				</ul>
 			</div>

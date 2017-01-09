@@ -83,7 +83,7 @@ $pboutique=$result['pboutique'];
 
 <div id="container">
  <div id="first">
-<h1><v2><a href="/index1.php">Chronologie</a></v2></h1>
+<h1><v2><a href="base1.php">Chronologie</a></v2></h1>
 <h2><v2>Serveur dynamique World of Warcraft</v2></h2>
 </div>
 
@@ -119,12 +119,12 @@ $pboutique=$result['pboutique'];
 			<h2 class="title">Annonces</h2>
 				<ul>
 					<li>
-						<h3>19 Décembre 2016</h3>
-						<v2>Ouverture du serveur au testeur</v2>
+						<h3>9 Janvier 2017</h3>
+						<v2>Site presque terminé, ouverture Iminente !</v2>
 					</li>
 					<li>
-					<h3>19 Décembre 2016</h3>
-					<v2>Première ébauche du site</v2>
+						<h3>19 Décembre 2016</h3>
+						<v2>Ouverture du serveur au testeur</v2>
 					</li>
 
 				</ul>

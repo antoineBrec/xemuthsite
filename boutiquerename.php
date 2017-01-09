@@ -86,7 +86,7 @@ $pboutique=$result['pboutique'];
 
 <div id="container">
  <div id="first">
-<h1><v2><a href="/index1.php">Chronologie</a></v2></h1>
+<h1><v2><a href="base1.php">Chronologie</a></v2></h1>
 <h2><v2>Serveur dynamique World of Warcraft</v2></h2>
 </div>
 
@@ -112,7 +112,7 @@ $pboutique=$result['pboutique'];
 				<ul>
 					<li><a href="rejoindre1.php" title="">Nous rejoindre</a></li>
 					<li><a href="#" title="">Avancée PVE</a></li>
-					<li><a href="boutique1.php" title="">Boutique</a></li>
+					<li><a href="#" title="">Boutique</a></li>
 					<li><a href="#" title="">Forum</a></li>
 					<li><a href="#" title="">Bug Report</a></li>
 				</ul>
@@ -122,12 +122,12 @@ $pboutique=$result['pboutique'];
 			<h2 class="title">Annonces</h2>
 				<ul>
 					<li>
-						<h3>19 Décembre 2016</h3>
-						<v2>Ouverture du serveur au testeur</v2>
+						<h3>9 Janvier 2017</h3>
+						<v2>Site presque terminé, ouverture Iminente !</v2>
 					</li>
 					<li>
-					<h3>19 Décembre 2016</h3>
-					<v2>Première ébauche du site</v2>
+						<h3>19 Décembre 2016</h3>
+						<v2>Ouverture du serveur au testeur</v2>
 					</li>
 
 				</ul>
@@ -170,7 +170,7 @@ $pboutique=$result['pboutique'];
 			<h2 >Votez pour le serveur !</h2>
 
 
-			 <p> Vous voulez un serveur plus peuplé ? Alors votez ici !</p>
+			  <p> Vous voulez un serveur plus peuplé ? Alors votez <a href="vote.php" title="">ici</a> !</p>
 
 
 
@@ -206,14 +206,14 @@ $pboutique=$result['pboutique'];
 	<?php
       $sql3 =$bdd->query('SELECT name FROM characters WHERE account=\''.$_SESSION['userid'].'\';') or die(mysql_error());
 
-  		echo('<form action="bufferrename.php" method="post">');
+  		echo('<form action="bufferrename" method="post">');
 			echo '<select id="nom" name="name">';
 			while($char=$sql3->fetch())
 			{
 			echo ('<option value=\''.$char['name'].'\'>'.$char['name'].'</option>');
 			}
 			echo('</select>');
-			
+
       echo ('<input type="submit" value=\'Renommer pour : 200 points boutique\'>');
 echo ('</form>');
 

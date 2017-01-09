@@ -152,7 +152,7 @@ $pboutique=$result['pboutique'];
 
 <div id="container">
  <div id="first">
-<h1><v2><a href="/index1.php">Chronologie</a></v2></h1>
+<h1><v2><a href="/index1">Chronologie</a></v2></h1>
 <h2><v2>Serveur dynamique World of Warcraft</v2></h2>
 </div>
 
@@ -163,9 +163,9 @@ $pboutique=$result['pboutique'];
 <div align="right"><v1>Bienvenue <?php echo ($_SESSION['username']); ?> !</v1></div><br>
 <div align="right">
 
-<li><y1><a href="changepass.php" title="">Changer mdp</a></y1></li>
+<li><y1><a href="changepass" title="">Changer mdp</a></y1></li>
 <li><y><a href="#" title="">Changer Email</a></y></li>
-<li><y2><a href="base.php" title="">Déconnexion</a></y2></li>
+<li><y2><a href="base" title="">Déconnexion</a></y2></li>
 
 </div>
  <div id="clear"></div>
@@ -176,28 +176,28 @@ $pboutique=$result['pboutique'];
 <div class="left-box">
 			<o>
 				<ul>
-					<li><a href="rejoindre1.php" title="">Nous rejoindre</a></li>
+					<li><a href="rejoindre1" title="">Nous rejoindre</a></li>
 					<li><a href="#" title="">Avancée PVE</a></li>
-					<li><a href="boutique1.php" title="">Boutique</a></li>
+					<li><a href="boutique1" title="">Boutique</a></li>
 					<li><a href="#" title="">Forum</a></li>
 					<li><a href="#" title="">Bug Report</a></li>
 				</ul>
 			</o>
 		</div>
-		<div class="left-box">
-			<h2 class="title">Annonces</h2>
-				<ul>
-					<li>
-						<h3>19 Décembre 2016</h3>
-						<v2>Ouverture du serveur au testeur</v2>
-					</li>
-					<li>
-					<h3>19 Décembre 2016</h3>
-					<v2>Première ébauche du site</v2>
-					</li>
+    <div class="left-box">
+      <h2 class="title">Annonces</h2>
+        <ul>
+          <li>
+            <h3>9 Janvier 2017</h3>
+            <v2>Site presque terminé, ouverture Iminente !</v2>
+          </li>
+          <li>
+            <h3>19 Décembre 2016</h3>
+            <v2>Ouverture du serveur au testeur</v2>
+          </li>
 
-				</ul>
-			</div>
+        </ul>
+      </div>
 		<div class="left-box" >
 			<v2><h2 class="title">Joueur en ligne : </h2></v2>
 
@@ -236,7 +236,7 @@ $pboutique=$result['pboutique'];
 			<h2 >Votez pour le serveur !</h2>
 
 
-			 <p> Vous voulez un serveur plus peuplé ? Alors votez ici !</p>
+		 <p> Vous voulez un serveur plus peuplé ? Alors votez <a href="vote.php" title="">ici</a> !</p>
 
 
 
@@ -287,7 +287,7 @@ $pboutique=$result['pboutique'];
 			$cpt=60;
 			$idlevel=$level['level'];
       echo (' (level actuel : '.$idlevel.' )');
-      echo('<form action="bufferlevel.php" method="post">');
+      echo('<form action="bufferlevel" method="post">');
 			echo '<select id="niveau" name="level">';
 			$cout=0;
 				while($cpt != $level['level'])

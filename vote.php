@@ -2,6 +2,16 @@
 session_start();
 if($_SESSION['username']!=null)
 {
+	$_SESSION['coutachat']=0;
+	$_SESSION['levelachat'] =0;
+	$_SESSION['persoachat']=0;
+	$_SESSION['orachat']=0;
+	$_SESSION['renameachat']=0;
+	$_SESSION['apparenceachat']=0;
+	$_SESSION['raceachat']=0;
+	$_SESSION['buffer1']=null;
+	$_SESSION['buffer2']=null;
+	$_SESSION['buffer3']=null;
 }
 else
 {
@@ -10,9 +20,6 @@ header('Location: base.php');
 
 
 ?>
-
-
-
 
 <?php
 
@@ -61,14 +68,6 @@ header('Location: base.php');
                            }
 ?>
 
-<?php
-
-$bdd2 = new PDO('mysql:host=xemuth.maitremechant.com;dbname=realmd;charset=utf8', 'root', 'admin');
-
-$sql2 = $bdd2->query('SELECT pboutique FROM account WHERE username=\''.$_SESSION['username'].'\';') or die(mysql_error());
-$result=$sql2->fetch();
-$pboutique=$result['pboutique'];
-?>
 
 <html>
 <head>
@@ -86,7 +85,7 @@ $pboutique=$result['pboutique'];
 
 <div id="container">
  <div id="first">
-<h1><v2><a href="/index1">Chronologie</a></v2></h1>
+<h1><v2><a href="base1.php">Chronologie</a></v2></h1>
 <h2><v2>Serveur dynamique World of Warcraft</v2></h2>
 </div>
 
@@ -110,15 +109,15 @@ $pboutique=$result['pboutique'];
 <div class="left-box">
 			<o>
 				<ul>
-					<li><a href="rejoindre1" title="">Nous rejoindre</a></li>
+					<li><a href="rejoindre1.php" title="">Nous rejoindre</a></li>
 					<li><a href="#" title="">Avancée PVE</a></li>
-					<li><a href="boutique1" title="">Boutique</a></li>
+					<li><a href="boutique1.php" title="">Boutique</a></li>
 					<li><a href="#" title="">Forum</a></li>
 					<li><a href="#" title="">Bug Report</a></li>
 				</ul>
 			</o>
 		</div>
-		<div class="left-box">
+    <div class="left-box">
 			<h2 class="title">Annonces</h2>
 				<ul>
 					<li>
@@ -159,7 +158,7 @@ $pboutique=$result['pboutique'];
 			<h2 >Passage à la prochaine extension :</h2>
 
 				<p>Temps restant avant l'ouverture de la porte des ténèbres :
-         <iframe src="http://www.decompte.net/compte-a-rebours.php?c=1514172240&s=1&r=0" width="240" height="26" marginheight="0" marginwidth="0" align="middle" scrolling="No" frameborder="0">iframe                  désactivée</iframe>
+                                 <iframe src="http://www.decompte.net/compte-a-rebours.php?c=1514172240&s=1&r=0" width="240" height="26" marginheight="0" marginwidth="0" align="middle" scrolling="No" frameborder="0">iframe                  désactivée</iframe>
 
 
 
@@ -170,17 +169,7 @@ $pboutique=$result['pboutique'];
 			<h2 >Votez pour le serveur !</h2>
 
 
-			  <p> Vous voulez un serveur plus peuplé ? Alors votez <a href="vote" title="">ici</a> !</p>
-
-
-
-		</div>
-
-		<div class="left-box" >
-
-
-
-			 <p> Vous possédé actuellement : <?php echo ($pboutique); ?>  points boutique </p>
+			 <p> Vous voulez un serveur plus peuplé ? Alors votez ici !</p>
 
 
 
@@ -194,67 +183,12 @@ $pboutique=$result['pboutique'];
 	<div id="center">
 	<div class="mid-box">
 
-			<div align="center"><h2>Bienvenue dans la boutique !</h2></div>
 
+    <a href="http://www.rpg-paradize.com/?page=vote&vote=108191" target=_blank>
+          Votez pour Chronologie<br />
 
-	<P><h3>Acheter de l'or pour :	</h3>
-
-
-
-
-
-	<?php
-      $sql3 =$bdd->query('SELECT name FROM characters WHERE account=\''.$_SESSION['userid'].'\';') or die(mysql_error());
-			$pigeon;
-
-
-			while($char=$sql3->fetch())
-			{
-
-			echo ('<div align="left">'.$char['name']) ;
-
-			$sql4 =$bdd->query('select money from characters where name =\''.$char['name'].'\';') or die(mysql_error());
-			$gold=0;
-			$cout=0;
-
-			while($or=$sql4->fetch())
-			{
-
-			$oractuel=$or['money'];
-		$oractuel= substr($oractuel,0,-4);
-      echo (' ( '.$oractuel.' pieces d\'or )');
-
-      echo('<form action="bufferor" method="post">');
-			echo '<select id="or" name="gold">';
-			$cpt=0;
-
-
-				while($cpt<8)
-				{
-
-					$cpt++;
-
-					$cout=$cout+100;
-          $gold=$gold+100;
-
-
-					echo ('<option value=\''.$gold.'|'.$cout.'|'.$char['name'].'\'>acheter :'.$gold. ' pieces d\'or pour :'.$cout.' point boutique </option>') ;
-				}
-
-
-          echo('</select>');
-          echo ('<input type="submit" value=\'Acheter pour '.$char['name'].'\'>');
-
-
-			echo '</div>';
-      echo ('</form>');
-			}
-			}
-	?>
-
-
-
-								</p>
+          Merci d'avance
+    </a>
 
 
 

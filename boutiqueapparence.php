@@ -108,30 +108,33 @@ $pboutique=$result['pboutique'];
 
 <div id="sidebar">
 <div class="left-box">
-			<o>
-				<ul>
-					<li><a href="rejoindre1.php" title="">Nous rejoindre</a></li>
-					<li><a href="#" title="">Avancée PVE</a></li>
-					<li><a href="boutique1.php" title="">Boutique</a></li>
-					<li><a href="#" title="">Forum</a></li>
-					<li><a href="#" title="">Bug Report</a></li>
-				</ul>
-			</o>
-		</div>
-		<div class="left-box">
-			<h2 class="title">Annonces</h2>
-				<ul>
-					<li>
-						<h3>19 Décembre 2016</h3>
-						<v2>Ouverture du serveur au testeur</v2>
-					</li>
-					<li>
-					<h3>19 Décembre 2016</h3>
-					<v2>Première ébauche du site</v2>
-					</li>
+  <h2 class="title">Annonces</h2>
+    <ul>
+      <li>
+        <h3>9 Janvier 2017</h3>
+        <v2>Site presque terminé, ouverture Iminente !</v2>
+      </li>
+      <li>
+        <h3>19 Décembre 2016</h3>
+        <v2>Ouverture du serveur au testeur</v2>
+      </li>
 
-				</ul>
-			</div>
+    </ul>
+  </div>
+	<div class="left-box">
+		<h2 class="title">Annonces</h2>
+			<ul>
+				<li>
+					<h3>9 Janvier 2017</h3>
+					<v2>Site presque terminé, ouverture Iminente !</v2>
+				</li>
+				<li>
+					<h3>19 Décembre 2016</h3>
+					<v2>Ouverture du serveur au testeur</v2>
+				</li>
+
+			</ul>
+		</div>
 		<div class="left-box" >
 			<v2><h2 class="title">Joueur en ligne : </h2></v2>
 
@@ -170,7 +173,7 @@ $pboutique=$result['pboutique'];
 			<h2 >Votez pour le serveur !</h2>
 
 
-			 <p> Vous voulez un serveur plus peuplé ? Alors votez ici !</p>
+			 <p> Vous voulez un serveur plus peuplé ? Alors votez <a href="http://www.rpg-paradize.com/?page=vote&vote=108191" title="">ici</a> !</p>
 
 
 
